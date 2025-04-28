@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabhat | Portfolio</title>
+    <style>
+        /* Galaxy Background */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: url('https://cdn.discordapp.com/attachments/1327316753503748159/1366442721824473168/Background.png?ex=6810f674&is=680fa4f4&hm=c139f11725d127fe89c94111658b094908ff393ecc9a4584e2f646d17c88693a&') fixed;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            backdrop-filter: blur(5px);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Profile Image */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #6c5ce7;
+            margin: 20px auto;
+            transition: all 0.5s ease;
+            box-shadow: 0 0 20px #6c5ce7;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 300px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 20px 0;
+            max-width: 800px;
+            width: 90%;
+            backdrop-filter: blur(3px);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h1, h3 {
+            color: #6c5ce7;
+            text-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #dfe6e9;
+        }
+
+        /* Scroll Effect Class */
+        .scrolled-effect {
+            transform: scale(0.9) rotate(360deg);
+            border-color: #00ff88;
+            box-shadow: 0 0 30px #00ff88;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prabhat's Portfolio</h1>
+        <img src="https://cdn.discordapp.com/attachments/1327316753503748159/1366032235274440806/Prabhat.png?ex=6810c9a8&is=680f7828&hm=eab5eb6e508c6205e9720fb062b700e646c642088fbce096e1b5104de35b7057&" 
+             alt="Profile Picture" 
+             class="profile-img" 
+             id="profileImg">
+    </header>
+    
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h3>About Me</h3>
+            <p>Hello everyone! I'm Prabhat, a 16-year-old Commerce student with a passion for coding. Give me Wi-Fi, my laptop, coffee, and Spotify, and I'll create magic! I specialize in Lua, HTML/CSS, JavaScript, and Python.</p>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobby">
+            <h3>Hobbies</h3>
+            <p>Casual gaming 🎮 | Game development 🕹️ | Coding marathons 💻 | Turning visions into digital reality ✨</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h3>Projects</h3>
+            <p>🚧 Amazing projects in development - Stay tuned! 🔥</p>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support">
+            <h3>Support</h3>
+            <p>💖 Support my coding journey through Donoation (details coming soon)!</p>
+        </section>
+    </main>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Add contact section styles */
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            margin: 20px auto;
+            backdrop-filter: blur(3px);
+        }
+
+        .contact-link {
+            color: white;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            transform: scale(1.2);
+            color: #00ff88;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- ... previous content ... -->
+
+    <footer>
+        <section class="contact-container">
+            <h3>Contact Me</h3>
+            <div class="contact-links">
+                <!-- Email -->
+                <p>Email - prabhat78961@gmail.com</p>
+                
+                <!-- Discord -->
+                <a href="https://discord.gg/WnGcCqZPHJ" class="contact-link" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+        </section>
+    </footer>
+
+    <!-- ... rest of the script ... -->
+</body>
+</html>
+
+    <script>
+        // Single Image Scroll Effect
+        window.addEventListener('scroll', () => {
+            const img = document.getElementById('profileImg');
+            window.scrollY > 100 
+                ? img.classList.add('scrolled-effect') 
+                : img.classList.remove('scrolled-effect');
+        });
+
+        // Smooth Content Appearance
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.75) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initial Load Fade-in
+        window.onload = () => document.body.style.opacity = '1';
+    </script>
+</body>
+</html>
